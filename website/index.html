@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glassdoor Salary Prediction Analysis</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fc;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #005b96;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      font-size: 17px;
+      line-height: 1.8;
+      background-color: #ffffff;
+      border-left: 5px solid #005b96;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+
+    nav {
+      background-color: #e6f0ff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 5px 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #005b96;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0074d9;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #005b96;
+      margin-top: 50px;
+    }
+
+    section img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin: 40px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> Glassdoor Salary Prediction </h1>
+    <p>15 Insightful Charts from Data Exploration to Model Evaluation</p>
+  </header>
+
+  <div class="intro">
+    <p>Welcome to the Glassdoor Salary Prediction Project! <br><br>
+    This project dives into real-world job listings from Glassdoor, uncovering trends, relationships, and predictors of salary in the tech industry. Using powerful ML models, SHAP values, and visual storytelling, we analyze the most important factors impacting compensation. Click any chart below to explore!</p>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#chart1">1️⃣ Job Titles</a></li>
+      <li><a href="#chart2">2️⃣ Company Ratings</a></li>
+      <li><a href="#chart3">3️⃣ Experience vs Salary</a></li>
+      <li><a href="#chart4">4️⃣ Sector Salary Heatmap</a></li>
+      <li><a href="#chart5">5️⃣ Location vs Salary</a></li>
+      <li><a href="#chart6">6️⃣ Remote vs Office Jobs</a></li>
+      <li><a href="#chart7">7️⃣ Skill Frequency</a></li>
+      <li><a href="#chart8">8️⃣ Industry vs Salary</a></li>
+      <li><a href="#chart9">9️⃣ Seniority Levels</a></li>
+      <li><a href="#chart10">🔟 Feature Correlation</a></li>
+      <li><a href="#chart11">11️⃣ Feature Importance</a></li>
+      <li><a href="#chart12">12️⃣ SHAP Plot</a></li>
+      <li><a href="#chart13">13️⃣ Model Accuracy Comparison</a></li>
+      <li><a href="#chart14">14️⃣ Error Distribution</a></li>
+      <li><a href="#chart15">15️⃣ Final Salary Predictions</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2 id="chart1">1️⃣ Job Titles Distribution</h2>
+    <img src="images/chart1.png" alt="Chart 1: Job Titles">
+
+    <h2 id="chart2">2️⃣ Company Ratings Overview</h2>
+    <img src="images/chart2.png" alt="Chart 2: Company Ratings">
+
+    <h2 id="chart3">3️⃣ Experience vs Salary</h2>
+    <img src="images/chart3.png" alt="Chart 3: Experience vs Salary">
+
+    <h2 id="chart4">4️⃣ Sector-wise Salary Heatmap</h2>
+    <img src="images/chart4.png" alt="Chart 4: Sector Heatmap">
+
+    <h2 id="chart5">5️⃣ Location-based Salary Analysis</h2>
+    <img src="images/chart5.png" alt="Chart 5: Location vs Salary">
+
+    <h2 id="chart6">6️⃣ Remote vs On-Site Jobs</h2>
+    <img src="images/chart6.png" alt="Chart 6: Remote vs Office">
+
+    <h2 id="chart7">7️⃣ Most Demanded Skills</h2>
+    <img src="images/chart7.png" alt="Chart 7: Skills Frequency">
+
+    <h2 id="chart8">8️⃣ Industry vs Salary</h2>
+    <img src="images/chart8.png" alt="Chart 8: Industry vs Salary">
+
+    <h2 id="chart9">9️⃣ Seniority Level Distribution</h2>
+    <img src="images/chart9.png" alt="Chart 9: Seniority">
+
+    <h2 id="chart10">🔟 Correlation Between Features</h2>
+    <img src="images/chart10.png" alt="Chart 10: Correlation Heatmap">
+
+    <h2 id="chart11">11️⃣ Feature Importance (XGBoost)</h2>
+    <img src="images/chart11.png" alt="Chart 11: Feature Importance">
+
+    <h2 id="chart12">12️⃣ SHAP Explanation Plot</h2>
+    <img src="images/chart12.png" alt="Chart 12: SHAP Plot">
+
+    <h2 id="chart13">13️⃣ ML Models Comparison</h2>
+    <img src="images/chart13.png" alt="Chart 13: ML Model Comparison">
+
+    <h2 id="chart14">14️⃣ Error Distribution Across Models</h2>
+    <img src="images/chart14.png" alt="Chart 14: Errors">
+
+    <h2 id="chart15">15️⃣ Predicted vs Actual Salary Plot</h2>
+    <img src="images/chart15.png" alt="Chart 15: Prediction Accuracy">
+  </section>
+
+  <footer>
+    <p>© 2025 Glassdoor Salary Prediction | Designed by [Your Name]</p>
+  </footer>
+
+</body>
+</html>

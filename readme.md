@@ -19,7 +19,7 @@ This project explores and visualizes job listings from Glassdoor to understand h
 
 ## 🔗 Live Demo
 
-➡️ Coming Soon (or add GitHub Pages link)
+➡️ https://gargi-kadam.github.io/Glassdoor-project/
 
 ##  Tech Stack
 
